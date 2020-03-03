@@ -530,6 +530,31 @@
    start="clk_0.clk_reset"
    end="onchip_mem.reset1" />
  <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="cpu.reset_n" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="cpu.jtag_debug_module_reset"
+   end="sdram.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="cpu.jtag_debug_module_reset"
+   end="led_pio.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="cpu.jtag_debug_module_reset"
+   end="sysid.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="cpu.jtag_debug_module_reset"
+   end="sys_clk_timer.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="cpu.jtag_debug_module_reset"
+   end="jtag_uart.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
