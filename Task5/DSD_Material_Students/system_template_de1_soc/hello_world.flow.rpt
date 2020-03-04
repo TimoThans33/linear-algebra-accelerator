@@ -1,5 +1,5 @@
 Flow report for hello_world
-Tue Mar 03 18:48:59 2020
+Wed Mar 04 12:56:30 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar 03 18:48:30 2020           ;
+; Flow Status                     ; Successful - Wed Mar 04 12:56:03 2020           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; hello_world                                     ;
 ; Top-level Entity Name           ; hello_world                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 1,656 / 32,070 ( 5 % )                          ;
-; Total registers                 ; 2699                                            ;
+; Logic utilization (in ALMs)     ; 1,665 / 32,070 ( 5 % )                          ;
+; Total registers                 ; 2700                                            ;
 ; Total pins                      ; 47 / 457 ( 10 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 576,768 / 4,065,280 ( 14 % )                    ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/03/2020 18:43:44 ;
+; Start date & time ; 03/04/2020 12:50:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hello_world         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 176831338576817.158326102312872                                                        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 176831338576817.158332623004284                                                        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ip/pll.cmp                                                                             ; --            ; --          ; --         ;
@@ -101,11 +101,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:17     ; 1.0                     ; 5060 MB             ; 00:02:32                           ;
-; Fitter               ; 00:01:49     ; 1.2                     ; 7057 MB             ; 00:04:27                           ;
-; Assembler            ; 00:00:17     ; 1.0                     ; 4918 MB             ; 00:00:11                           ;
-; Timing Analyzer      ; 00:00:26     ; 1.8                     ; 5415 MB             ; 00:00:34                           ;
-; Total                ; 00:04:49     ; --                      ; --                  ; 00:07:44                           ;
+; Analysis & Synthesis ; 00:02:31     ; 1.0                     ; 5054 MB             ; 00:02:31                           ;
+; Fitter               ; 00:02:10     ; 1.2                     ; 7104 MB             ; 00:04:30                           ;
+; Assembler            ; 00:00:27     ; 1.0                     ; 4919 MB             ; 00:00:10                           ;
+; Timing Analyzer      ; 00:00:25     ; 1.7                     ; 5408 MB             ; 00:00:30                           ;
+; Total                ; 00:05:33     ; --                      ; --                  ; 00:07:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
