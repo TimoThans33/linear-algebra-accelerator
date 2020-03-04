@@ -1,0 +1,8 @@
+H:/DSD_Material/ip/cordic/sincos_cordic.v {1 {vlog -work work -vopt H:/DSD_Material/ip/cordic/sincos_cordic.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module sincos_cordic
+
+Top level modules:
+	sincos_cordic
+
+} {} {}}
