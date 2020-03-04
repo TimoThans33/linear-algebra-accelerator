@@ -448,32 +448,12 @@ refer to the applicable agreement for further details.
 	(pt 600 96)
 )
 (connector
-	(pt 760 96)
-	(pt 816 96)
-)
-(connector
-	(pt 816 96)
-	(pt 816 208)
-)
-(connector
 	(pt 816 208)
 	(pt 856 208)
 )
 (connector
-	(pt 760 136)
-	(pt 768 136)
-)
-(connector
-	(pt 768 136)
-	(pt 768 232)
-)
-(connector
 	(pt 800 288)
 	(pt 856 288)
-)
-(connector
-	(pt 528 232)
-	(pt 768 232)
 )
 (connector
 	(pt 528 272)
@@ -609,4 +589,24 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 760 456)
 	(pt 856 456)
+)
+(connector
+	(pt 816 208)
+	(pt 816 96)
+)
+(connector
+	(pt 752 136)
+	(pt 760 136)
+)
+(connector
+	(pt 760 232)
+	(pt 760 136)
+)
+(connector
+	(pt 528 232)
+	(pt 760 232)
+)
+(connector
+	(pt 760 96)
+	(pt 816 96)
 )
