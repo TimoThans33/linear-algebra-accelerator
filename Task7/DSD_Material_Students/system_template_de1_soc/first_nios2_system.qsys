@@ -33,6 +33,14 @@
          type = "String";
       }
    }
+   element first_nios2_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element fp32mult_0
    {
       datum _sortIndex
@@ -188,7 +196,7 @@
   <parameter name="cpuID" value="0" />
   <parameter name="cpuID_stored" value="0" />
   <parameter name="cpuReset" value="false" />
-  <parameter name="customInstSlavesSystemInfo"><![CDATA[<info><slave name="fp32mult_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /><slave name="sincos_cordic_0" baseAddress="1" addressSpan="1" clockCycleType="MULTICYCLE" /></info>]]></parameter>
+  <parameter name="customInstSlavesSystemInfo"><![CDATA[<info><slave name="fp32mult_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /><slave name="sincos_cordic_0" baseAddress="1" addressSpan="1" clockCycleType="COMBINATORIAL" /></info>]]></parameter>
   <parameter name="dataAddrWidth" value="25" />
   <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x800000' end='0x1000000' /><slave name='cpu.jtag_debug_module' start='0x1000800' end='0x1001000' /><slave name='sys_clk_timer.s1' start='0x1001000' end='0x1001020' /><slave name='led_pio.s1' start='0x1001020' end='0x1001030' /><slave name='sysid.control_slave' start='0x1001030' end='0x1001038' /><slave name='jtag_uart.avalon_jtag_slave' start='0x1001038' end='0x1001040' /></address-map>]]></parameter>
   <parameter name="dcache_bursts" value="false" />
@@ -402,7 +410,9 @@
   <parameter name="registerDataIn" value="true" />
   <parameter name="rowWidth" value="12" />
  </module>
- <module name="sincos_cordic_0" kind="sincos_cordic" version="1.0" enabled="1" />
+ <module name="sincos_cordic_0" kind="sincos_cordic" version="1.0" enabled="1">
+  <parameter name="XY_SZ" value="16" />
+ </module>
  <module
    name="sys_clk_timer"
    kind="altera_avalon_timer"
@@ -514,6 +524,11 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="sysid.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="led_pio.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="sdram.clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clk_0.clk"
+   end="sincos_cordic_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="onchip_mem.clk1" />
  <connection kind="interrupt" version="18.1" start="cpu.d_irq" end="jtag_uart.irq">
   <parameter name="irqNumber" value="16" />
@@ -538,7 +553,7 @@
    kind="nios_custom_instruction"
    version="18.1"
    start="cpu.custom_instruction_master"
-   end="sincos_cordic_0.sincos_cordic">
+   end="sincos_cordic_0.nios_custom_instruction_slave">
   <parameter name="CIName" value="sincos_cordic_0" />
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="1" />

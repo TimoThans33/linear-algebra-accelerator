@@ -1,7 +1,7 @@
 `timescale 1 ns/100 ps
 
 
-module CORDIC(clock, angle, Xin, Yin, Xout, Yout);
+module CORDIC(clock, angle, in, Xout, Yout);
 	
 	parameter XY_SZ = 16; //
 	
@@ -10,11 +10,12 @@ module CORDIC(clock, angle, Xin, Yin, Xout, Yout);
 	input								clock;
 	
 	input signed		  [31:0] angle;
-	input signed	[XY_SZ-1:0] Xin;
-	input signed	[XY_SZ-1:0] Yin;
+	input signed		  [31:0] in;
 	output signed	  [XY_SZ:0] Xout;
 	output signed		[XY_SZ:0] Yout;
 	
+	//reg signed Xin = in[15:0];
+	//wire signed Yin = in[31:16];
 
 	//
 	// arctan table
@@ -87,22 +88,22 @@ module CORDIC(clock, angle, Xin, Yin, Xout, Yout);
 			2'b00, //0 to pi/2 quadrant >> no rotation is necessary
 			2'b11: // 0 to -pi/2 quadrant >> no pre-rotation necessary
 			begin
-				X[0] <= Xin;
-				Y[0] <= Yin;
+				X[0] <= in[15:0];
+				Y[0] <= in[31:16];
 				Z[0] <= angle;
 			end
 			
 			2'b01: //pi/2 to pi quadrant so pre rotation is needed
 			begin
-				X[0] <= -Yin;
-				Y[0] <= Xin;
+				X[0] <= -in[31:16];
+				Y[0] <= in[15:0];
 				Z[0] <= {2'b00, angle[29:0]}; // subtract pi/2 from angle
 			end
 			
 			2'b10: //pi to 3/2 pi quadrant so pre rotation is needed
 			begin
-				X[0] <= Yin;
-				Y[0] <= -Xin;
+				X[0] <= in[31:16];
+				Y[0] <= -in[15:0];
 				Z[0] <= {2'b11,angle[29:0]}; // add pi/2 from angle
 			end
 			

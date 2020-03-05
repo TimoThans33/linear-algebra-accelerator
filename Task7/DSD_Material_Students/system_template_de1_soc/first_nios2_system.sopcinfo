@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.03.04.15:35:40 -->
+ <!-- 2020.03.05.15:13:20 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1583336140</value>
+  <value>1583421200</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -369,6 +369,12 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sdram</moduleName>
     <slaveName>clk</slaveName>
     <name>sdram.clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>sincos_cordic_0</moduleName>
+    <slaveName>clk</slaveName>
+    <name>sincos_cordic_0.clk</name>
    </clockDomainMember>
   </interface>
   <interface name="clk_reset" kind="reset_source" version="18.1">
@@ -1651,7 +1657,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="customInstSlavesSystemInfo">
    <type>java.lang.String</type>
-   <value><![CDATA[<info><slave name="fp32mult_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /><slave name="sincos_cordic_0" baseAddress="1" addressSpan="1" clockCycleType="MULTICYCLE" /></info>]]></value>
+   <value><![CDATA[<info><slave name="fp32mult_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /><slave name="sincos_cordic_0" baseAddress="1" addressSpan="1" clockCycleType="COMBINATORIAL" /></info>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -3254,6 +3260,78 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>multi_writerc</role>
    </port>
+   <port>
+    <name>E_ci_combo_result</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>result</role>
+   </port>
+   <port>
+    <name>E_ci_combo_a</name>
+    <direction>Output</direction>
+    <width>5</width>
+    <role>a</role>
+   </port>
+   <port>
+    <name>E_ci_combo_b</name>
+    <direction>Output</direction>
+    <width>5</width>
+    <role>b</role>
+   </port>
+   <port>
+    <name>E_ci_combo_c</name>
+    <direction>Output</direction>
+    <width>5</width>
+    <role>c</role>
+   </port>
+   <port>
+    <name>E_ci_combo_dataa</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>dataa</role>
+   </port>
+   <port>
+    <name>E_ci_combo_datab</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>datab</role>
+   </port>
+   <port>
+    <name>E_ci_combo_estatus</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>estatus</role>
+   </port>
+   <port>
+    <name>E_ci_combo_ipending</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>ipending</role>
+   </port>
+   <port>
+    <name>E_ci_combo_n</name>
+    <direction>Output</direction>
+    <width>8</width>
+    <role>n</role>
+   </port>
+   <port>
+    <name>E_ci_combo_readra</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>readra</role>
+   </port>
+   <port>
+    <name>E_ci_combo_readrb</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>readrb</role>
+   </port>
+   <port>
+    <name>E_ci_combo_writerc</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>writerc</role>
+   </port>
    <customInstruction>
     <isBridge>false</isBridge>
     <moduleName>fp32mult_0</moduleName>
@@ -3265,8 +3343,8 @@ parameters are a RESULT of the module parameters. -->
    <customInstruction>
     <isBridge>false</isBridge>
     <moduleName>sincos_cordic_0</moduleName>
-    <slaveName>sincos_cordic</slaveName>
-    <name>sincos_cordic_0.sincos_cordic</name>
+    <slaveName>nios_custom_instruction_slave</slaveName>
+    <name>sincos_cordic_0.nios_custom_instruction_slave</name>
     <opcodeNumber>1</opcodeNumber>
     <opcodeMnemonic>sincos_cordic_0</opcodeMnemonic>
    </customInstruction>
@@ -5869,6 +5947,14 @@ parameters are a RESULT of the module parameters. -->
    path="sincos_cordic_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
+  <parameter name="XY_SZ">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -5886,7 +5972,7 @@ the requested settings for a module instance. -->
    <valid>true</valid>
   </parameter>
   <interface
-     name="sincos_cordic"
+     name="nios_custom_instruction_slave"
      kind="nios_custom_instruction_slave"
      version="18.1">
    <!-- The connection points exposed by a module instance for the
@@ -5912,13 +5998,13 @@ parameters are a RESULT of the module parameters. -->
     <type>int</type>
     <value>0</value>
     <derived>false</derived>
-    <enabled>true</enabled>
+    <enabled>false</enabled>
     <visible>true</visible>
     <valid>true</valid>
    </parameter>
    <parameter name="clockCycleType">
     <type>com.altera.sopcmodel.custominstruction.CustomInstruction$ClockCycleType</type>
-    <value>MULTICYCLE</value>
+    <value>COMBINATORIAL</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -5975,31 +6061,64 @@ parameters are a RESULT of the module parameters. -->
    <type>nios_custom_instruction</type>
    <isStart>false</isStart>
    <port>
-    <name>a</name>
+    <name>angle</name>
     <direction>Input</direction>
-    <width>5</width>
-    <role>a</role>
+    <width>32</width>
+    <role>datab</role>
    </port>
    <port>
-    <name>b</name>
+    <name>Xin</name>
     <direction>Input</direction>
-    <width>5</width>
-    <role>b</role>
+    <width>16</width>
+    <role>dataa</role>
    </port>
    <port>
-    <name>c</name>
-    <direction>Input</direction>
-    <width>5</width>
-    <role>c</role>
+    <name>Xout</name>
+    <direction>Output</direction>
+    <width>17</width>
+    <role>result</role>
    </port>
+  </interface>
+  <interface name="clk" kind="clock_sink" version="18.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="externallyDriven">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="ptfSchematicName">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>clock</type>
+   <isStart>false</isStart>
    <port>
-    <name>reset</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-   <port>
-    <name>clk</name>
+    <name>clock</name>
     <direction>Input</direction>
     <width>1</width>
     <role>clk</role>
@@ -6801,7 +6920,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1583336140</value>
+   <value>1583421200</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -6821,7 +6940,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1583336140</value>
+   <value>1583421200</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -6837,7 +6956,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1583336140</value>
+   <value>1583421200</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -7865,6 +7984,33 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
+   name="clk_0.clk/sincos_cordic_0.clk"
+   kind="clock"
+   version="18.1"
+   start="clk_0.clk"
+   end="sincos_cordic_0.clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>clk_0</startModule>
+  <startConnectionPoint>clk</startConnectionPoint>
+  <endModule>sincos_cordic_0</endModule>
+  <endConnectionPoint>clk</endConnectionPoint>
+ </connection>
+ <connection
    name="cpu.d_irq/jtag_uart.irq"
    kind="interrupt"
    version="18.1"
@@ -8002,11 +8148,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>nios_custom_instruction_slave</endConnectionPoint>
  </connection>
  <connection
-   name="cpu.custom_instruction_master/sincos_cordic_0.sincos_cordic"
+   name="cpu.custom_instruction_master/sincos_cordic_0.nios_custom_instruction_slave"
    kind="nios_custom_instruction"
    version="18.1"
    start="cpu.custom_instruction_master"
-   end="sincos_cordic_0.sincos_cordic">
+   end="sincos_cordic_0.nios_custom_instruction_slave">
   <parameter name="CIName">
    <type>java.lang.String</type>
    <value>sincos_cordic_0</value>
@@ -8066,7 +8212,7 @@ parameters are a RESULT of the module parameters. -->
   <startModule>cpu</startModule>
   <startConnectionPoint>custom_instruction_master</startConnectionPoint>
   <endModule>sincos_cordic_0</endModule>
-  <endConnectionPoint>sincos_cordic</endConnectionPoint>
+  <endConnectionPoint>nios_custom_instruction_slave</endConnectionPoint>
  </connection>
  <connection
    name="clk_0.clk_reset/jtag_uart.reset"
@@ -8414,7 +8560,7 @@ parameters are a RESULT of the module parameters. -->
   <version>16.1</version>
  </plugin>
  <plugin>
-  <instanceCount>6</instanceCount>
+  <instanceCount>7</instanceCount>
   <name>clock_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -8558,7 +8704,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-  <instanceCount>6</instanceCount>
+  <instanceCount>7</instanceCount>
   <name>clock</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>

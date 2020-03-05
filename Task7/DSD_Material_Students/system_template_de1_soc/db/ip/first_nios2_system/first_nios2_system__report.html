@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2020.03.04.15:35:41</td>
+    <td class="l">2020.03.05.15:13:21</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -460,7 +460,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;sincos_cordic</td>
+      <td class="to">&#160;&#160;nios_custom_instruction_slave</td>
      </tr>
     </table>
    </div>
@@ -969,7 +969,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo</td>
-        <td class="parametervalue">&lt;info&gt;&lt;slave name="fp32mult_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /&gt;&lt;slave name="sincos_cordic_0" baseAddress="1" addressSpan="1" clockCycleType="MULTICYCLE" /&gt;&lt;/info&gt;</td>
+        <td class="parametervalue">&lt;info&gt;&lt;slave name="fp32mult_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /&gt;&lt;slave name="sincos_cordic_0" baseAddress="1" addressSpan="1" clockCycleType="COMBINATORIAL" /&gt;&lt;/info&gt;</td>
        </tr>
        <tr>
         <td class="parametername">deviceFeaturesSystemInfo</td>
@@ -1827,13 +1827,25 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="2">
+       <a href="#module_clk_0">clk_0</a>
+      </td>
+      <td class="from">clk&#160;&#160;</td>
+      <td class="main" rowspan="5">sincos_cordic_0</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
        <a href="#module_cpu">cpu</a>
       </td>
       <td class="from">custom_instruction_master&#160;&#160;</td>
-      <td class="main" rowspan="2">sincos_cordic_0</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;sincos_cordic</td>
+      <td class="to">&#160;&#160;nios_custom_instruction_slave</td>
      </tr>
     </table>
    </div>
@@ -1844,6 +1856,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <td class="parametersbox">
       <h2>Parameters</h2>
       <table>
+       <tr>
+        <td class="parametername">XY_SZ</td>
+        <td class="parametervalue">16</td>
+       </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
         <td class="parametervalue">UNKNOWN</td>
@@ -2113,7 +2129,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1583336140</td>
+        <td class="parametervalue">1583421200</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2138,7 +2154,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1583336140</td>
+        <td class="parametervalue">1583421200</td>
        </tr>
       </table>
      </td>
