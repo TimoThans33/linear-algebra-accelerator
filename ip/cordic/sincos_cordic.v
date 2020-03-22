@@ -1,21 +1,47 @@
 `timescale 1 ns/100 ps
 
+// The idea is:
+// X_n = K_i[X_o - Y_o * d_i * 2^-i]
+// Y_n = K_i[Y_o + X_o * d_i * 2^-i]
+// 
+// With K_i being cos(angle) = 1/sqrt(1+(2^-i)^2)
+//
+// But to get the desired angle of roation we have to perform a series of succesively smaller elementary rotations:
+// We start with the desired angloe of rotation "angle" for each iteration if "angle" > 0 then we subtract
+// the current iteration angle from Z_i, otherwise we add the current iteratioin angle to Z_i and also make our
+// appropriate X and Y calculations
 
-module CORDIC(clock, angle, in, Xout, Yout);
+
+
+
+// Note: 1. Input angle is a modulo of 2*PI scaled to fit in a 32 bit register. The user must translate
+// this angle to a value from 0 - (2^32 - 1). 0 deg = 32'h0, 359.99999.... = 32'hFF_FF_FF_FF
+// to translate from degrees to a 32 bit value, multiply 2^32 by the angle (in degrees),
+// then divide by 360
+// 2. Size of Xout, Yout is 1 bit larger due to a system gain of 1.647 (which is < 2)  
+
+
+module CORDIC(clock, deg, Xout);
 	
 	parameter XY_SZ = 16; //
 	
 	localparam STG = XY_SZ; 
 	
 	input								clock;
-	
-	input signed		  [31:0] angle;
-	input signed		  [31:0] in;
+	input signed		  [31:0] deg;
 	output signed	  [XY_SZ:0] Xout;
-	output signed		[XY_SZ:0] Yout;
 	
-	//reg signed Xin = in[15:0];
-	//wire signed Yin = in[31:16];
+	reg [XY_SZ-1:0] Xin, Yin;
+	wire [31:0] angle;
+	
+	localparam VALUE = 32000/1.647;
+	initial
+	begin
+		Xin = VALUE;
+		Yin = 1'd0;
+	end
+	assign angle = ((1 << 32) * deg) / 360;
+	
 
 	//
 	// arctan table
@@ -88,22 +114,22 @@ module CORDIC(clock, angle, in, Xout, Yout);
 			2'b00, //0 to pi/2 quadrant >> no rotation is necessary
 			2'b11: // 0 to -pi/2 quadrant >> no pre-rotation necessary
 			begin
-				X[0] <= in[15:0];
-				Y[0] <= in[31:16];
+				X[0] <= Xin;
+				Y[0] <= Yin;
 				Z[0] <= angle;
 			end
 			
 			2'b01: //pi/2 to pi quadrant so pre rotation is needed
 			begin
-				X[0] <= -in[31:16];
-				Y[0] <= in[15:0];
+				X[0] <= -Yin;
+				Y[0] <= Xin;
 				Z[0] <= {2'b00, angle[29:0]}; // subtract pi/2 from angle
 			end
 			
 			2'b10: //pi to 3/2 pi quadrant so pre rotation is needed
 			begin
-				X[0] <= in[31:16];
-				Y[0] <= -in[15:0];
+				X[0] <= Yin;
+				Y[0] <= -Xin;
 				Z[0] <= {2'b11,angle[29:0]}; // add pi/2 from angle
 			end
 			
@@ -148,11 +174,8 @@ module CORDIC(clock, angle, in, Xout, Yout);
 	// output
 	//
 	assign Xout = X[STG-1];
-	assign Yout = Y[STG-1];
 		
 endmodule
-	
-	
 	
 	
 	
