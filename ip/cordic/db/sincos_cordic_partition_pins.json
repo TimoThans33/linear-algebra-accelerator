@@ -72,331 +72,135 @@
 					"strict" : false
 				},
 				{
-					"name" : "Yout[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[4]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[5]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[6]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[7]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[8]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[9]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[10]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[11]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[12]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[13]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[14]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[15]",
-					"strict" : false
-				},
-				{
-					"name" : "Yout[16]",
-					"strict" : false
-				},
-				{
 					"name" : "clock",
 					"strict" : false
 				},
 				{
-					"name" : "angle[31]",
+					"name" : "deg[31]",
 					"strict" : false
 				},
 				{
-					"name" : "angle[30]",
+					"name" : "deg[30]",
 					"strict" : false
 				},
 				{
-					"name" : "in[15]",
+					"name" : "deg[29]",
 					"strict" : false
 				},
 				{
-					"name" : "in[31]",
+					"name" : "deg[28]",
 					"strict" : false
 				},
 				{
-					"name" : "in[14]",
+					"name" : "deg[27]",
 					"strict" : false
 				},
 				{
-					"name" : "in[30]",
+					"name" : "deg[26]",
 					"strict" : false
 				},
 				{
-					"name" : "in[13]",
+					"name" : "deg[25]",
 					"strict" : false
 				},
 				{
-					"name" : "in[29]",
+					"name" : "deg[24]",
 					"strict" : false
 				},
 				{
-					"name" : "in[12]",
+					"name" : "deg[23]",
 					"strict" : false
 				},
 				{
-					"name" : "in[28]",
+					"name" : "deg[22]",
 					"strict" : false
 				},
 				{
-					"name" : "in[11]",
+					"name" : "deg[21]",
 					"strict" : false
 				},
 				{
-					"name" : "in[27]",
+					"name" : "deg[20]",
 					"strict" : false
 				},
 				{
-					"name" : "in[10]",
+					"name" : "deg[19]",
 					"strict" : false
 				},
 				{
-					"name" : "in[26]",
+					"name" : "deg[18]",
 					"strict" : false
 				},
 				{
-					"name" : "in[9]",
+					"name" : "deg[17]",
 					"strict" : false
 				},
 				{
-					"name" : "in[25]",
+					"name" : "deg[10]",
 					"strict" : false
 				},
 				{
-					"name" : "in[8]",
+					"name" : "deg[16]",
 					"strict" : false
 				},
 				{
-					"name" : "in[24]",
+					"name" : "deg[9]",
 					"strict" : false
 				},
 				{
-					"name" : "in[7]",
+					"name" : "deg[15]",
 					"strict" : false
 				},
 				{
-					"name" : "in[23]",
+					"name" : "deg[11]",
 					"strict" : false
 				},
 				{
-					"name" : "in[6]",
+					"name" : "deg[12]",
 					"strict" : false
 				},
 				{
-					"name" : "in[22]",
+					"name" : "deg[13]",
 					"strict" : false
 				},
 				{
-					"name" : "in[5]",
+					"name" : "deg[14]",
 					"strict" : false
 				},
 				{
-					"name" : "in[21]",
+					"name" : "deg[8]",
 					"strict" : false
 				},
 				{
-					"name" : "in[4]",
+					"name" : "deg[7]",
 					"strict" : false
 				},
 				{
-					"name" : "in[20]",
+					"name" : "deg[6]",
 					"strict" : false
 				},
 				{
-					"name" : "in[3]",
+					"name" : "deg[5]",
 					"strict" : false
 				},
 				{
-					"name" : "in[19]",
+					"name" : "deg[4]",
 					"strict" : false
 				},
 				{
-					"name" : "in[2]",
+					"name" : "deg[3]",
 					"strict" : false
 				},
 				{
-					"name" : "in[18]",
+					"name" : "deg[2]",
 					"strict" : false
 				},
 				{
-					"name" : "in[1]",
+					"name" : "deg[1]",
 					"strict" : false
 				},
 				{
-					"name" : "in[17]",
-					"strict" : false
-				},
-				{
-					"name" : "in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "in[16]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[29]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[28]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[27]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[26]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[25]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[24]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[23]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[22]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[21]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[20]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[19]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[18]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[17]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[16]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[15]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[14]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[13]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[0]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[12]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[11]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[10]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[9]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[8]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[7]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[1]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[6]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[5]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[2]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[4]",
-					"strict" : false
-				},
-				{
-					"name" : "angle[3]",
+					"name" : "deg[0]",
 					"strict" : false
 				}
 			]

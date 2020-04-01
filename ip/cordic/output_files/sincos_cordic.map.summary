@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Mar 05 15:31:07 2020
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Fri Mar 20 15:59:47 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Standard Edition
 Revision Name : sincos_cordic
 Top-level Entity Name : CORDIC
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 992
-Total pins : 99
+Total registers : 894
+Total pins : 50
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

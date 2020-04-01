@@ -1,5 +1,5 @@
 Flow report for hello_world
-Wed Mar 04 13:40:03 2020
+Sun Mar 22 13:38:44 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar 04 13:39:34 2020           ;
+; Flow Status                     ; Successful - Sun Mar 22 13:38:12 2020           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; hello_world                                     ;
 ; Top-level Entity Name           ; hello_world                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 1,751 / 32,070 ( 5 % )                          ;
-; Total registers                 ; 2993                                            ;
+; Logic utilization (in ALMs)     ; 2,156 / 32,070 ( 7 % )                          ;
+; Total registers                 ; 3457                                            ;
 ; Total pins                      ; 47 / 457 ( 10 % )                               ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 576,768 / 4,065,280 ( 14 % )                    ;
-; Total DSP Blocks                ; 3 / 87 ( 3 % )                                  ;
+; Total block memory bits         ; 594,477 / 4,065,280 ( 15 % )                    ;
+; Total DSP Blocks                ; 4 / 87 ( 5 % )                                  ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -67,33 +67,35 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2020 13:34:42 ;
+; Start date & time ; 03/22/2020 13:31:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hello_world         ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                        ;
-+-------------------------------------+----------------------------------------------------------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                                                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 176831338576817.158332888110944                                                        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; ip/pll.cmp                                                                             ; --            ; --          ; --         ;
-; MISC_FILE                           ; ip/pll_sim/pll.vo                                                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                 ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                 ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                 ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                  ; --            ; --          ; --         ;
-; SEARCH_PATH                         ; h:\dsd_material\task5\dsd_material_students\system_template_de1_soc\first_nios2_system ; --            ; --          ; --         ;
-; SEARCH_PATH                         ; h:\dsd_material\task5\dsd_material_students\system_template_de1_soc\ip                 ; --            ; --          ; --         ;
-; SPD_FILE                            ; ip/pll.spd                                                                             ; --            ; --          ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                                                     ; --            ; --          ; --         ;
-; TIMING_ANALYZER_DO_REPORT_TIMING    ; On                                                                                     ; Off           ; --          ; --         ;
-+-------------------------------------+----------------------------------------------------------------------------------------+---------------+-------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                 ;
++-------------------------------------+-------------------------------------------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                                                           ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+-------------------------------------------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 963351284704.158488031311628                                                                    ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                              ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ip/pll.cmp                                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ip/pll_sim/pll.vo                                                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; fp_add.bsf                                                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; fp_add_bb.v                                                                                     ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                          ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                          ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                          ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                             ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                           ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; c:\digital_system_design\task6\dsd_material_students\system_template_de1_soc\first_nios2_system ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; c:\digital_system_design\task6\dsd_material_students\system_template_de1_soc\ip                 ; --            ; --          ; --         ;
+; SPD_FILE                            ; ip/pll.spd                                                                                      ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                                              ; --            ; --          ; --         ;
+; TIMING_ANALYZER_DO_REPORT_TIMING    ; On                                                                                              ; Off           ; --          ; --         ;
++-------------------------------------+-------------------------------------------------------------------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -101,11 +103,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:16     ; 1.0                     ; 5077 MB             ; 00:02:33                           ;
-; Fitter               ; 00:01:53     ; 1.2                     ; 7058 MB             ; 00:04:29                           ;
-; Assembler            ; 00:00:18     ; 1.0                     ; 4921 MB             ; 00:00:12                           ;
-; Timing Analyzer      ; 00:00:27     ; 1.8                     ; 5416 MB             ; 00:00:34                           ;
-; Total                ; 00:04:54     ; --                      ; --                  ; 00:07:48                           ;
+; Analysis & Synthesis ; 00:02:56     ; 1.0                     ; 5082 MB             ; 00:03:46                           ;
+; Fitter               ; 00:03:07     ; 1.1                     ; 6627 MB             ; 00:05:54                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4778 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:31     ; 1.5                     ; 5373 MB             ; 00:00:44                           ;
+; Total                ; 00:06:36     ; --                      ; --                  ; 00:10:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,10 +116,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; skee-506a-023    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; skee-506a-023    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; skee-506a-023    ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; skee-506a-023    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-J1RAGBO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-J1RAGBO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-J1RAGBO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-J1RAGBO  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

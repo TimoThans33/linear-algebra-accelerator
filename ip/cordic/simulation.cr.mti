@@ -1,15 +1,8 @@
-H:/DSD_Material/ip/cordic/sincos_cordic.v {1 {vlog -work work -stats=none H:/DSD_Material/ip/cordic/sincos_cordic.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+C:/Digital_System_Design/ip/cordic/sincos_cordic.v {1 {vlog -work work -stats=none C:/Digital_System_Design/ip/cordic/sincos_cordic.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling module CORDIC
 
 Top level modules:
 	CORDIC
-
-} {} {}} H:/DSD_Material/ip/cordic/cordic_test.v {1 {vlog -work work -stats=none H:/DSD_Material/ip/cordic/cordic_test.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module cordic_test
-
-Top level modules:
-	cordic_test
 
 } {} {}}

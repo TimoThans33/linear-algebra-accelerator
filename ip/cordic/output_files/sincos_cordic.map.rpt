@@ -1,6 +1,6 @@
 Analysis & Synthesis report for sincos_cordic
-Thu Mar 05 15:31:07 2020
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Fri Mar 20 15:59:47 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
 
 
 ---------------------
@@ -14,21 +14,22 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
  11. Parameter Settings for User Entity Instance: Top-level Entity: |CORDIC
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2019  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -38,21 +39,22 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 05 15:31:07 2020           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 20 15:59:47 2020           ;
+; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Standard Edition ;
 ; Revision Name                   ; sincos_cordic                                   ;
 ; Top-level Entity Name           ; CORDIC                                          ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 992                                             ;
-; Total pins                      ; 99                                              ;
+; Total registers                 ; 894                                             ;
+; Total pins                      ; 50                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -157,27 +159,34 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                            ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path              ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
-; sincos_cordic.v                  ; yes             ; User Verilog HDL File  ; H:/DSD_Material/ip/cordic/sincos_cordic.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; sincos_cordic.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/sincos_cordic.v        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga/19.1/quartus/libraries/megafunctions/lpm_divide.tdf                                    ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/19.1/quartus/libraries/megafunctions/abs_divider.inc                                   ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga/19.1/quartus/libraries/megafunctions/sign_div_unsign.inc                               ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/19.1/quartus/libraries/megafunctions/aglobal191.inc                                    ;         ;
+; db/lpm_divide_nqo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/lpm_divide_nqo.tdf  ;         ;
+; db/abs_divider_0dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/abs_divider_0dg.tdf ;         ;
+; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/alt_u_div_g2f.tdf   ;         ;
+; db/lpm_abs_0p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/lpm_abs_0p9.tdf     ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/lpm_abs_4p9.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -185,46 +194,132 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 547         ;
+; Estimate of Logic utilization (ALMs needed) ; 833         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 1075        ;
+; Combinational ALUT usage for logic          ; 1652        ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 0           ;
-;     -- 5 input functions                    ; 32          ;
-;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 1043        ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 194         ;
+;     -- <=3 input functions                  ; 1458        ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 992         ;
+; Dedicated logic registers                   ; 894         ;
 ;                                             ;             ;
-; I/O pins                                    ; 99          ;
+; I/O pins                                    ; 50          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 992         ;
-; Total fan-out                               ; 5753        ;
-; Average fan-out                             ; 2.54        ;
+; Maximum fan-out                             ; 894         ;
+; Total fan-out                               ; 7148        ;
+; Average fan-out                             ; 2.70        ;
 +---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |CORDIC                    ; 1075 (1075)         ; 992 (992)                 ; 0                 ; 0          ; 99   ; 0            ; |CORDIC             ; CORDIC      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                    ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Entity Name     ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |CORDIC                               ; 1652 (954)          ; 894 (894)                 ; 0                 ; 0          ; 50   ; 0            ; |CORDIC                                                                                              ; CORDIC          ; work         ;
+;    |lpm_divide:Div0|                  ; 698 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CORDIC|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
+;       |lpm_divide_nqo:auto_generated| ; 698 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CORDIC|lpm_divide:Div0|lpm_divide_nqo:auto_generated                                                ; lpm_divide_nqo  ; work         ;
+;          |abs_divider_0dg:divider|    ; 698 (26)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CORDIC|lpm_divide:Div0|lpm_divide_nqo:auto_generated|abs_divider_0dg:divider                        ; abs_divider_0dg ; work         ;
+;             |alt_u_div_g2f:divider|   ; 640 (640)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CORDIC|lpm_divide:Div0|lpm_divide_nqo:auto_generated|abs_divider_0dg:divider|alt_u_div_g2f:divider  ; alt_u_div_g2f   ; work         ;
+;             |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CORDIC|lpm_divide:Div0|lpm_divide_nqo:auto_generated|abs_divider_0dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9     ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------+
-; Registers Removed During Synthesis                           ;
-+---------------------------------------+----------------------+
-; Register name                         ; Reason for Removal   ;
-+---------------------------------------+----------------------+
-; Z[0][31]                              ; Merged with Z[0][30] ;
-; Total Number of Removed Registers = 1 ;                      ;
-+---------------------------------------+----------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; X[0][16]                               ; Stuck at GND due to stuck port data_in ;
+; X[0][11]                               ; Merged with X[0][0]                    ;
+; X[0][14]                               ; Merged with X[0][0]                    ;
+; X[0][2]                                ; Merged with X[0][0]                    ;
+; X[0][5]                                ; Merged with X[0][0]                    ;
+; X[0][6]                                ; Merged with X[0][0]                    ;
+; X[0][7]                                ; Merged with X[0][0]                    ;
+; X[0][8]                                ; Merged with X[0][0]                    ;
+; X[0][9]                                ; Merged with X[0][0]                    ;
+; X[0][12]                               ; Merged with X[0][10]                   ;
+; X[0][13]                               ; Merged with X[0][10]                   ;
+; X[0][15]                               ; Merged with X[0][10]                   ;
+; X[0][1]                                ; Merged with X[0][10]                   ;
+; X[0][3]                                ; Merged with X[0][10]                   ;
+; X[0][4]                                ; Merged with X[0][10]                   ;
+; Y[0][12]                               ; Merged with Y[0][10]                   ;
+; Y[0][13]                               ; Merged with Y[0][10]                   ;
+; Y[0][15]                               ; Merged with Y[0][10]                   ;
+; Y[0][1]                                ; Merged with Y[0][10]                   ;
+; Y[0][3]                                ; Merged with Y[0][10]                   ;
+; Y[0][4]                                ; Merged with Y[0][10]                   ;
+; Y[0][14]                               ; Merged with Y[0][11]                   ;
+; Y[0][2]                                ; Merged with Y[0][11]                   ;
+; Y[0][5]                                ; Merged with Y[0][11]                   ;
+; Y[0][6]                                ; Merged with Y[0][11]                   ;
+; Y[0][7]                                ; Merged with Y[0][11]                   ;
+; Y[0][8]                                ; Merged with Y[0][11]                   ;
+; Y[0][9]                                ; Merged with Y[0][11]                   ;
+; X[0][10]                               ; Stuck at GND due to stuck port data_in ;
+; Z[0][31]                               ; Merged with Z[0][30]                   ;
+; Y[0][16]                               ; Merged with Y[0][10]                   ;
+; Y[0][10]                               ; Stuck at GND due to stuck port data_in ;
+; X[0][0]                                ; Stuck at VCC due to stuck port data_in ;
+; Y[0][11]                               ; Stuck at GND due to stuck port data_in ;
+; Y[0][0]                                ; Stuck at VCC due to stuck port data_in ;
+; X[1][16]                               ; Stuck at GND due to stuck port data_in ;
+; X[1][15]                               ; Stuck at GND due to stuck port data_in ;
+; X[1][14]                               ; Stuck at VCC due to stuck port data_in ;
+; X[1][13]                               ; Stuck at GND due to stuck port data_in ;
+; X[1][12]                               ; Stuck at GND due to stuck port data_in ;
+; X[1][11]                               ; Stuck at VCC due to stuck port data_in ;
+; X[1][10]                               ; Stuck at GND due to stuck port data_in ;
+; X[1][9]                                ; Stuck at VCC due to stuck port data_in ;
+; X[1][8]                                ; Stuck at VCC due to stuck port data_in ;
+; X[1][7]                                ; Stuck at VCC due to stuck port data_in ;
+; X[1][6]                                ; Stuck at VCC due to stuck port data_in ;
+; X[1][5]                                ; Stuck at VCC due to stuck port data_in ;
+; X[1][4]                                ; Stuck at GND due to stuck port data_in ;
+; X[1][3]                                ; Stuck at GND due to stuck port data_in ;
+; X[1][0]                                ; Stuck at VCC due to stuck port data_in ;
+; X[1][1]                                ; Stuck at GND due to stuck port data_in ;
+; X[1][2]                                ; Stuck at VCC due to stuck port data_in ;
+; Y[1][0]                                ; Stuck at VCC due to stuck port data_in ;
+; Y[1][14]                               ; Merged with Y[1][16]                   ;
+; Y[1][13]                               ; Merged with Y[1][16]                   ;
+; Y[1][15]                               ; Merged with Y[1][16]                   ;
+; Y[1][12]                               ; Merged with Y[1][16]                   ;
+; Y[1][11]                               ; Merged with Y[1][16]                   ;
+; Y[1][10]                               ; Merged with Y[1][16]                   ;
+; Y[1][9]                                ; Merged with Y[1][16]                   ;
+; Y[1][8]                                ; Merged with Y[1][16]                   ;
+; Y[1][7]                                ; Merged with Y[1][16]                   ;
+; Y[1][6]                                ; Merged with Y[1][16]                   ;
+; Y[1][5]                                ; Merged with Y[1][16]                   ;
+; Y[1][4]                                ; Merged with Y[1][16]                   ;
+; Y[1][3]                                ; Merged with Y[1][16]                   ;
+; Y[1][2]                                ; Merged with Y[1][16]                   ;
+; Y[1][1]                                ; Merged with Y[1][16]                   ;
+; Total Number of Removed Registers = 68 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                          ;
++---------------+---------------------------+------------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                   ;
++---------------+---------------------------+------------------------------------------------------------------------------------------+
+; X[0][16]      ; Stuck at GND              ; X[1][8], X[1][7], X[1][6], X[1][5], X[1][4], X[1][3], X[1][0], X[1][1], X[1][2], Y[1][0] ;
+;               ; due to stuck port data_in ;                                                                                          ;
+; Y[0][10]      ; Stuck at GND              ; X[1][15], X[1][14], X[1][13], X[1][12], X[1][11], X[1][10]                               ;
+;               ; due to stuck port data_in ;                                                                                          ;
+; X[0][0]       ; Stuck at VCC              ; X[1][16], X[1][9]                                                                        ;
+;               ; due to stuck port data_in ;                                                                                          ;
++---------------+---------------------------+------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -232,23 +327,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 992   ;
+; Total registers                              ; 894   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |CORDIC|X[0][14]           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -261,27 +347,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_nqo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 992                         ;
-;     plain             ; 992                         ;
-; arriav_lcell_comb     ; 1075                        ;
-;     arith             ; 1029                        ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 90                          ;
-;         2 data inputs ; 426                         ;
-;         3 data inputs ; 511                         ;
-;     normal            ; 46                          ;
-;         1 data inputs ; 12                          ;
-;         3 data inputs ; 2                           ;
-;         5 data inputs ; 32                          ;
-; boundary_port         ; 99                          ;
+; arriav_ff             ; 894                         ;
+;     SLD               ; 31                          ;
+;     plain             ; 863                         ;
+; arriav_lcell_comb     ; 1652                        ;
+;     arith             ; 1297                        ;
+;         0 data inputs ; 49                          ;
+;         1 data inputs ; 103                         ;
+;         2 data inputs ; 490                         ;
+;         3 data inputs ; 545                         ;
+;         4 data inputs ; 110                         ;
+;     normal            ; 345                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 36                          ;
+;         2 data inputs ; 220                         ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 84                          ;
+;     shared            ; 10                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+; boundary_port         ; 50                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 2.62                        ;
+; Max LUT depth         ; 55.60                       ;
+; Average LUT depth     ; 16.46                       ;
 +-----------------------+-----------------------------+
 
 
@@ -290,7 +406,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -299,27 +415,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu Mar 05 15:30:50 2020
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Standard Edition
+    Info: Processing started: Fri Mar 20 15:59:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sincos_cordic -c sincos_cordic
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sincos_cordic.v
-    Info (12023): Found entity 1: CORDIC File: H:/DSD_Material/ip/cordic/sincos_cordic.v Line: 4
+    Info (12023): Found entity 1: CORDIC File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/sincos_cordic.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file cordic_test.v
-    Info (12023): Found entity 1: cordic_test File: H:/DSD_Material/ip/cordic/cordic_test.v Line: 3
+    Info (12023): Found entity 1: cordic_test File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/cordic_test.v Line: 3
 Info (12127): Elaborating entity "CORDIC" for the top level hierarchy
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/sincos_cordic.v Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/sincos_cordic.v Line: 23
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/sincos_cordic.v Line: 23
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_nqo.tdf
+    Info (12023): Found entity 1: lpm_divide_nqo File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/lpm_divide_nqo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_0dg.tdf
+    Info (12023): Found entity 1: abs_divider_0dg File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/abs_divider_0dg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
+    Info (12023): Found entity 1: alt_u_div_g2f File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/alt_u_div_g2f.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_0p9.tdf
+    Info (12023): Found entity 1: lpm_abs_0p9 File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/lpm_abs_0p9.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/ip/cordic/db/lpm_abs_4p9.tdf Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1230 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 65 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 1131 logic cells
+Info (21057): Implemented 1734 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 1684 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Thu Mar 05 15:31:08 2020
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Fri Mar 20 15:59:47 2020
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:50
 
 

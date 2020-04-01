@@ -9,39 +9,38 @@ z2
 cModel Technology
 dH:/DSD_Material/Task7/DSD_Material_Students/system_template_de1_soc
 vCORDIC
-Z0 !s110 1583416195
+!s110 1584883336
 !i10b 1
-!s100 0F]AKUz?fFLBl7FamHQB31
-I^=7^D>jL]O=h8fKbRzJBH1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dH:/DSD_Material/ip/cordic
-w1583414689
-8H:/DSD_Material/ip/cordic/sincos_cordic.v
-FH:/DSD_Material/ip/cordic/sincos_cordic.v
+!s100 lJ6QRafb=E`XD6A=FfoaT3
+I:kR]Y>6^zA_@^?baK?Nb^2
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+dC:/Digital_System_Design/ip/cordic
+w1584722105
+8C:/Digital_System_Design/ip/cordic/sincos_cordic.v
+FC:/Digital_System_Design/ip/cordic/sincos_cordic.v
 L0 4
-Z3 OV;L;10.5b;63
+OV;L;10.4d;61
 r1
 !s85 0
 31
-!s108 1583416195.000000
-!s107 H:/DSD_Material/ip/cordic/sincos_cordic.v|
-!s90 -reportprogress|300|-work|work|-stats=none|H:/DSD_Material/ip/cordic/sincos_cordic.v|
+!s108 1584883336.000000
+!s107 C:/Digital_System_Design/ip/cordic/sincos_cordic.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Digital_System_Design/ip/cordic/sincos_cordic.v|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+Z1 o-work work
 n@c@o@r@d@i@c
 vcordic_test
-R0
+!s110 1583416195
 !i10b 1
 !s100 lJO;EEVciCkIITGm]KcJ51
 IPOK5[oIn72[02CXiDH`M<0
-R1
-R2
+R0
+dH:/DSD_Material/ip/cordic
 w1583414948
 8H:/DSD_Material/ip/cordic/cordic_test.v
 FH:/DSD_Material/ip/cordic/cordic_test.v
 L0 3
-R3
+OV;L;10.5b;63
 r1
 !s85 0
 31
@@ -49,5 +48,5 @@ r1
 !s107 H:/DSD_Material/ip/cordic/cordic_test.v|
 !s90 -reportprogress|300|-work|work|-stats=none|H:/DSD_Material/ip/cordic/cordic_test.v|
 !i113 1
-R4
-R5
+R1
+tCvgOpt 0

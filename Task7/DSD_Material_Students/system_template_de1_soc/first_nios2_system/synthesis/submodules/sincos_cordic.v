@@ -1,19 +1,26 @@
 `timescale 1 ns/100 ps
 
 
-module CORDIC(clock, angle, Xin, Yin, Xout, Yout);
+module CORDIC(clock, deg, Xout);
 	
 	parameter XY_SZ = 16; //
 	
 	localparam STG = XY_SZ; 
 	
 	input								clock;
-	
-	input signed		  [31:0] angle;
-	input signed	[XY_SZ-1:0] Xin;
-	input signed	[XY_SZ-1:0] Yin;
+	input signed		  [31:0] deg;
 	output signed	  [XY_SZ:0] Xout;
-	output signed		[XY_SZ:0] Yout;
+	
+	reg [XY_SZ-1:0] Xin, Yin;
+	wire [31:0] angle;
+	
+	localparam VALUE = 32000/1.647;
+	initial
+	begin
+		Xin = VALUE;
+		Yin = 1'd0;
+	end
+	assign angle = ((1 << 32) * deg) / 360;
 	
 
 	//
@@ -147,10 +154,8 @@ module CORDIC(clock, angle, Xin, Yin, Xout, Yout);
 	// output
 	//
 	assign Xout = X[STG-1];
-	assign Yout = Y[STG-1];
 		
 endmodule
-	
 	
 	
 	

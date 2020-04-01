@@ -110,6 +110,8 @@ set_global_assignment -name SDC_FILE hw_dev_tutorial.sdc
 set_global_assignment -name BDF_FILE hello_world.bdf
 set_global_assignment -name QIP_FILE ip/pll.qip
 set_global_assignment -name SIP_FILE ip/pll.sip
-set_global_assignment -name SEARCH_PATH "h:\\dsd_material\\task5\\dsd_material_students\\system_template_de1_soc\\first_nios2_system"
-set_global_assignment -name SEARCH_PATH "h:\\dsd_material\\task5\\dsd_material_students\\system_template_de1_soc\\ip"
+set_global_assignment -name SEARCH_PATH "c:\\digital_system_design\\task6\\dsd_material_students\\system_template_de1_soc\\first_nios2_system"
+set_global_assignment -name SEARCH_PATH "c:\\digital_system_design\\task6\\dsd_material_students\\system_template_de1_soc\\ip"
+set_global_assignment -name QIP_FILE fp_add.qip
+set_global_assignment -name BDF_FILE ip/FPADD.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

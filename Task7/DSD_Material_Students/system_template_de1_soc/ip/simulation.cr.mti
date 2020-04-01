@@ -1,0 +1,7 @@
+{C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/Task7/DSD_Material_Students/system_template_de1_soc/ip/cordic/CORDIC.v} {0 {vlog -work work -stats=none {C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/Task7/DSD_Material_Students/system_template_de1_soc/ip/cordic/CORDIC.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module CORDIC
+** Error: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/Task7/DSD_Material_Students/system_template_de1_soc/ip/cordic/CORDIC.v(19): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+** Error: C:/Users/Timo Thans/Documents/Minor Imperial/Digital_System_Design/Task7/DSD_Material_Students/system_template_de1_soc/ip/cordic/CORDIC.v(4): Identifier must be declared with a port mode: deg.
+
+} {4.0 6.0} {}}
