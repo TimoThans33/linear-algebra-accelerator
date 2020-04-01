@@ -12,27 +12,27 @@ The different tasks describe our design process to get to our final result. Whic
 
 ## Structure
 ```
+├── DSD_coursework_2020               # This repo from Omar Tahir includes Task 8
 ├── Pictures
      ├── DSD_formula.png              # Evaluated formula
      ├── DSDpt3.png                   # Used configurations
      ├── DSDRecap.png                 # Used configurations
      ├── Results-DSD3.png             # Results of all the different configurations
      └── sincos_cordic.png            # Simulation (Modelsim) of our Cordic algorithm
-├── ip/DSD_Material_Students          # Ip's for testing
+├── ip                                # Ip's for testing
      └── system_template_de1_soc
-├── Task2/DSD_Material_Students       # Computing a simple function
+├── Task2                             # Computing a simple function
      └── system_template_de1_soc
-├── Task3/DSD_Material_Students       # Storing the program and Data on External Memories
+├── Task3                             # Storing the program and Data on External Memories
      └── system_template_de1_soc
-├── Task4/DSD_Material_Students       # Evaluate a More Complex Mathematical Expression
+├── Task4                             # Evaluate a More Complex Mathematical Expression
      └── system_template_de1_soc
-├── Task5/DSD_Material_Students       # Add Multiplier Support
+├── Task5                             # Add Multiplier Support
      └── system_template_de1_soc
-├── Task6/DSD_Material_Students       # Add Hardware Floating-Point Units
+├── Task6                             # Add Hardware Floating-Point Units
      └── system_template_de1_soc
-├── Task7/DSD_Material_Students       # Add Dedicated Hardware Block to compute the inner part of the arithmic expression (Cordic)
+├── Task7                             # Add Dedicated Hardware Block to compute the inner part of the arithmic expression (Cordic)
      └── system_template_de1_soc
-├── Task8/DSD_Material_Students       # Add Dedicated Hardware Block to compute the arithmic expression
-     └── system_template_de1_soc
+├── Final Report                    
 └── Readme.md
 ```
