@@ -33,6 +33,8 @@ The different tasks describe our design process to get to our final result. Whic
      └── system_template_de1_soc
 ├── Task7                             # Add Dedicated Hardware Block to compute the inner part of the arithmic expression (Cordic)
      └── system_template_de1_soc
-├── Final Report                    
+├── Task8                             # Add Dedicated Hardware Block to compute the Arithmetic Expression
+     └── system_template_de1_soc  
+├── Report                     
 └── Readme.md
 ```
