@@ -11,7 +11,7 @@ The different tasks describe our design process to get to our final result. Whic
 ![Design process](Figures/Results-DSD3.PNG)
 
 ## Structure
-
+```
 ├── Pictures
      ├── DSD_formula.png              # Evaluated formula
      ├── DSDpt3.png                   # Used configurations
@@ -35,3 +35,4 @@ The different tasks describe our design process to get to our final result. Whic
 ├── Task8/DSD_Material_Students       # Add Dedicated Hardware Block to compute the arithmic expression
      └── system_template_de1_soc
 └── Readme.md
+```
