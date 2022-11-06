@@ -10,6 +10,12 @@ The different tasks describe our design process to get to our final result. Whic
 ![Evaluated function](Figures/DSD_formula.PNG)
 ![Design process](Figures/Results-DSD3.PNG)
 
+## Cordic Implementation
+
+For this project we had to design our own efficient CORDIC implementation. Below you find the output from my cordic VHDL module.
+
+![sincos_cordic.PNG](Figures/sincos_cordic.PNG)
+
 ## Structure
 ```
 ├── DSD_coursework_2020               # This repo from Omar Tahir includes Task 8
