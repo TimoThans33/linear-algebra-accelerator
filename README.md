@@ -1,4 +1,4 @@
-# Digital_System_Design
+# Linear Algebra Accelerator
 This reposistory includes code from coursework done for the module Digital System Design EE3.05 taught at Imperial College London by Prof. Christos Bouganis. The goal of the module was to familiarize students FPGA's, CPU architecture and HW/SW partitioning. Our objective in the coursework was to accelerate an application through reconfigurable HW.
 
 In collaboration with Omar Tahir (Talndir)
